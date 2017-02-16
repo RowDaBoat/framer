@@ -1,0 +1,23 @@
+Setup a Sublime Haskell Projoect
+
+1) Install cabal
+OSX:	
+	$ brew install cabal-install
+Debian:
+	# apt-get install cabal
+
+2) Install hdevtools and hsdev
+	$ cabal install happy			#unlisted dependency of hsdev
+	$ cabal install hdevtools
+	$ cabal install hsdev
+
+3) Follow the steps here to install SublimeHaskell and setup the project
+http://gettingsharper.de/2012/10/04/getting-started-with-using-sublimehaskell-and-cabal/
+
+4) Open the config file of the plugin
+/Users/[User]/Library/Application Support/Sublime Text 3/Packages/SublimeHaskell
+
+And search the option add_to_PATH, then add the path of the cabal bin applications to the list
+/Users/[User]/.cabal/bin
+
+5) To compile the project run ./build.sh
