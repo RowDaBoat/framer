@@ -1,3 +1,3 @@
 #! /bin/bash
 
-cabal clean
+ghci Framer.hs
