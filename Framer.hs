@@ -60,12 +60,12 @@ frameMappings f = let
     bf = bottom f
     rf = right f
     indices = [(i, j) | i <- [lf .. rf - 1], j <- [tf .. bf - 1]]
-    mapper = \i -> (i, PixelRGBA8 255 255 255 0)
+    mapper i = (i, PixelRGBA8 255 255 255 0)
     in map mapper indices
 
 calculateHeights hstep fs = let 
     l = length fs
-    f = \i -> abs (i - (l `div` 2))
+    f i = abs (i - (l `div` 2))
     i = map f [0 .. l - 1]
     fis = zip fs i
     in map (changeHeight hstep) fis
